@@ -1,14 +1,20 @@
-import { createCliRenderer, TextAttributes } from "@opentui/core";
+import { black, createCliRenderer, TextAttributes } from "@opentui/core";
 import { createRoot } from "@opentui/react";
+import Header from "./components/header";
+import InputBar from "./components/input-bar";
 
 function App() {
   return (
-    <box alignItems="center" justifyContent="center" flexGrow={1}>
-      <box justifyContent="center" alignItems="flex-end">
-        <textarea
-          placeholder="What will you build?"
-          style={{ width: "100%", height: "100%" }}
-        />
+    <box
+      backgroundColor="#0D0D12"
+      alignItems="center"
+      justifyContent="center"
+      width="100%"
+      height="100%"
+    >
+      <Header />
+      <box width="100%">
+        <InputBar onSubmit={(text) => {}} disabled={false} />
       </box>
     </box>
   );
